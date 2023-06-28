@@ -7,6 +7,7 @@ export default function Weather() {
   //define terms
 
   let [city, setCity] = useState("");
+  let [cityName, setCityName] = useState("");
   let [temperature, setTemperature] = useState("");
   let [description, setDescription] = useState("");
   let [humidity, setHumidity] = useState("");
@@ -26,6 +27,7 @@ export default function Weather() {
     setIcon(
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+    setCityName(`${city}`);
   }
 
   function handleSubmit(event) {
@@ -50,8 +52,9 @@ export default function Weather() {
       </div>
       <div className="weatherList">
         <ul>
+          <li className="cityName">{cityName}</li>
           <li>{temperature}</li>
-          <li>{description}</li>
+          <li className="weatherDescription">{description}</li>
           <li>{humidity}</li>
           <li>{wind}</li>
           <li>

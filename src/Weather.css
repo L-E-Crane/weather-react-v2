@@ -6,3 +6,8 @@ body {
 li {
   list-style-type: none;
 }
+
+.cityName,
+.weatherDescription {
+  text-transform: capitalize;
+}
