@@ -1,15 +1,22 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
+import Weather from "./Weather.js";
 
 export default function App() {
   return (
     <div className="App">
-      <h1>Weather App</h1>
-      <button className="btn btn-danger">hello</button>
-      <footer>
-        <a href="https://github.com/L-E-Crane/weather-react-v2">GitHub Here</a>
-      </footer>
+      <div className="container">
+        <h1>Weather App</h1>
+
+        <Weather />
+
+        <footer>
+          <a href="https://github.com/L-E-Crane/weather-react-v2">
+            GitHub Here
+          </a>
+        </footer>
+      </div>
     </div>
   );
 }
