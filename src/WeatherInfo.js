@@ -6,7 +6,10 @@ import WeatherTemperature from "./WeatherTemperature.js";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <h1 className="text-capitalize">{props.data.city}</h1>
+      <span className="city-name-icon">
+        <h1 className="text-capitalize">{props.data.city}</h1>
+        <WeatherIcon code={props.data.icon} size={65} />
+      </span>
       <ul>
         <li>
           <FormattedDate date={props.data.date} />
@@ -18,7 +21,6 @@ export default function WeatherInfo(props) {
           <WeatherTemperature celcius={props.data.temperature} />
         </div>
         <div className="col-6">
-          <WeatherIcon code={props.data.icon} size={65} />
           <ul>
             <li>Humidity: {props.data.humidity}%</li>
             <li>Wind: {props.data.wind} km/h</li>

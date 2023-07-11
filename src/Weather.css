@@ -50,3 +50,7 @@
   line-height: 1;
   top: -34px;
 }
+
+.Weather .city-name-icon {
+  display: inline-flex;
+}
